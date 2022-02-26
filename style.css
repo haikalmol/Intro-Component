@@ -1,0 +1,155 @@
+/* - View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page */
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background-image: url("images/bg-intro-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--red);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  max-width: max-content;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 20px;
+}
+
+.intro {
+  text-align: center;
+  width: 100%;
+}
+
+.second-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.free {
+  text-align: center;
+  background-color: var(--blue);
+  margin-top: 50px;
+  padding: 2px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px rgb(0 0 0 / 0.1);
+}
+
+.formulier {
+  background-color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 7px rgb(0 0 0 / 0.2);
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 15px 120px 15px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--grayish-blue);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-weight: 600;
+}
+
+form p {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 0;
+}
+
+button {
+  background-color: var(--green);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px 65px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 5px rgba(44, 165, 113, 0.9);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.terms {
+  color: var(--grayish-blue);
+  font-size: 13px;
+  padding: 5px 25px 0px 30px;
+}
+
+.terms-link {
+  text-decoration: none;
+  color: var(--red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--blue);
+}
+
+@media (min-width: 520px) {
+  .content {
+    margin: 20px 80px;
+  }
+}
+
+@media (min-width: 870px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .intro {
+    text-align: left;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url("images/bg-intro-desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content {
+    margin: 20px 150px;
+  }
+  h1 {
+    font-size: 44px;
+  }
+}
